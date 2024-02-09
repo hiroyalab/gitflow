@@ -15,15 +15,9 @@ gitの運用方針を整理
 
 ## リポジトリ設定(settings)
 
-| 項目 | |  設定値 | 概要 |
-| ---- | ---- | ---- | ---- |
-| Pull Requests | | |
-| Allow merge commits | | 有効 | |
-|^ | message | Default Message | |
-
-
 ### デフォルトブランチ
 `develop`
+[settings](settings)
 
 ### 
 
