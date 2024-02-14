@@ -105,13 +105,14 @@ gitの運用方針を整理
 
 1. リリース作成
 
-   gitのタグからリリースの作成
+   gitのタグからリリースの作成「Create release from tag」
 
-   
+   ![release1](release1.png)
+
 
    リリース情報を記載してリリース
    
-   記載内容のフォーマットは以下を参照
+   記載内容のフォーマットは以下参考
 
    Full Changelogは「Generate release notes」をクリックすると自動で出来る
    ```
