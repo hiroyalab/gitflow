@@ -243,3 +243,6 @@ gitの運用方針を整理
  - [【Git】コンフリクト(conflict)が発生しても大丈夫な対処法まとめ](https://qiita.com/shizen-shin/items/391aac7b9febaf11bde6)
  - [git tagの仕様・使い方](https://www.kagoya.jp/howto/rentalserver/webtrend/gittag/)
  - [文字の色コード](https://www.colordic.org/w)
+ - [gitmessageの設定方法](https://qiita.com/hhujk5/items/09d2d8aa299528f03ed2)
+ - [gitmessageの記載内容](https://qiita.com/mnishiguchi/items/aa198ced2a516b67341d#git-%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B)
+  - [コミットコメントのprefix](https://qiita.com/itosho/items/9565c6ad2ffc24c09364)
