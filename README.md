@@ -73,11 +73,62 @@ gitの運用方針を整理
    ```
    <span style="color: #e60033;">※マージ方法は`Rebase and merge`で行う事</span>（mainとdevelopのコミットログを一致させるため）
 
-1. tag作成
+1. mainブランチをローカルで最新化
 
-   リリース単位のタグを作成
+   mainブランチをチェックアウト
    ```
+   git checkout -b main origin/main
+   ```
+   すでにローカルにチェックアウトしてる場合はブランチを切替え
+   ```
+   git checkout main
+   ```
+
+   最新化
+   ```
+   git pull
+   ```
+
+1. リリースタグ作成
+
+   リモートのタグ確認
+   ```
+   git ls-remote --tags
+   ```
+
+   リリース単位のタグを作成して、プッシュ
+   タグ名は`v0.0.0`の形式
+   ```
+   git tag -a ｛タグ名｝ -m "[yyyyMMdd]初期リリース"
+   git push origin {タグ名}
+   ```
+
+1. リリース作成
+
+   gitのタグからリリースの作成
+
    
+
+   リリース情報を記載してリリース
+   
+   記載内容のフォーマットは以下を参照
+
+   Full Changelogは「Generate release notes」をクリックすると自動で出来る
+   ```
+   ## リリース日
+   2024/02/14
+
+   ## 対象バージョン
+   v1.0.0
+
+   ## リリース概要
+   gitflowのREADMEの作成
+
+   ## コミット一覧
+   **Full Changelog**: https://github.com/hiroyalab/gitflow/commits/v1.0.0
+   ```
+
+   ![release2](release2.png)
 
 
 
