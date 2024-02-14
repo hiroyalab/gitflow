@@ -68,8 +68,15 @@ gitの運用方針を整理
 ## リリース運用
 
 1. mainブランチへプルリクエスト
-   
+   ```
    main ← develop
+   ```
+   <span style="color: #e60033;">※マージ方法は`Rebase and merge`で行う事</span>（mainとdevelopのコミットログを一致させるため）
+
+1. tag作成
+
+   リリース単位のタグを作成
+   ```
    
 
 
@@ -149,3 +156,4 @@ gitの運用方針を整理
  - [Git コンフリクト解消手順](https://qiita.com/crarrry/items/c5964512e21e383b73da)
  - [【Git】コンフリクト(conflict)が発生しても大丈夫な対処法まとめ](https://qiita.com/shizen-shin/items/391aac7b9febaf11bde6)
  - [git tagの仕様・使い方](https://www.kagoya.jp/howto/rentalserver/webtrend/gittag/)
+ - [文字の色コード](https://www.colordic.org/w)
