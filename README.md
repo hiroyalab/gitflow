@@ -44,15 +44,17 @@ gitの運用方針を整理
     git config --local commit.template .gitmessage
     ``` 
 
-    以下を実行すると.gitmessageに記載されたテンプレートが表示される
+    `git commit -m`を使用せず以下を実行すると.gitmessageに記載されたテンプレートが表示される
 
     ```
     git commit
     ```
 
+   エディタが開くのでメッセージを入力し、`:wq`で閉じる
+
     ![gitcommit1](gitcommit1.png)
 
-    VSCodeからコミットする場合はメッセージ欄を空にした状態で✓コミットを押下する
+    VSCodeからコミットする場合はメッセージ欄を空にした状態でコミットを押下する
 
     ![gitcommit2](gitcommit2.png)
 
@@ -60,8 +62,6 @@ gitの運用方針を整理
 
     ![gitcommit3](gitcommit3.png)
 
-    結果はこのように表示される
-    ![gitcommit4](gitcommit4.png)
 
 
 ### 検証環境用ブランチ
