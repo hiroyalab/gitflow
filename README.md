@@ -1,6 +1,9 @@
 # git運用方針
 gitの運用方針を整理
 
+***
+***
+
 ## ブランチ管理
 
 | branch | 用途 | 作業者 |
@@ -13,6 +16,8 @@ gitの運用方針を整理
 
 ![gitflow](gitflow.png)
 
+***
+***
 
 ## ブランチ運用
 
@@ -65,14 +70,77 @@ gitの運用方針を整理
     
     ![conflict](conflict.png)
 
+***
+***
+
 ## リリース運用
 
 1. mainブランチへプルリクエスト
-   
+   ```
    main ← develop
+   ```
+   ※マージ方法は`Rebase and merge`で行う事（mainとdevelopのコミットログを一致させるため）
+
+1. mainブランチをローカルで最新化
+
+   mainブランチをチェックアウト
+   ```
+   git checkout -b main origin/main
+   ```
+   すでにローカルにチェックアウトしてる場合はブランチを切替え
+   ```
+   git checkout main
+   ```
+
+   最新化
+   ```
+   git pull
+   ```
+
+1. リリースタグ作成
+
+   リモートのタグ確認
+   ```
+   git ls-remote --tags
+   ```
+
+   リリース単位のタグを作成して、プッシュ
+   タグ名は`v0.0.0`の形式
+   ```
+   git tag -a ｛タグ名｝ -m "[yyyyMMdd]初期リリース"
+   git push origin {タグ名}
+   ```
+
+1. リリース作成
+
+   gitのタグからリリースの作成「Create release from tag」
+
+   ![release1](release1.png)
+
+
+   リリース情報を記載してリリース
    
+   記載内容のフォーマットは以下参考
 
+   ```
+   ## リリース日
+   2024/02/14
 
+   ## 対象バージョン
+   v1.0.0
+
+   ## リリース概要
+   gitflowのREADMEの作成
+
+   ## コミット一覧
+   **Full Changelog**: https://github.com/hiroyalab/gitflow/commits/v1.0.0
+   ```
+   Full Changelogは下図の「Generate release notes」をクリックすると自動で出来る
+
+   ![release2](release2.png)
+
+***
+***
 
 ## リポジトリ設定(settings)
 [個人開発用のGitHubリポジトリで設定した項目たち](https://peno022.hatenablog.com/entry/github-repository-settings)
@@ -142,6 +210,8 @@ gitの運用方針を整理
 |Allow force pushes| |force pushを許す|-|-|-|
 |Allow deletions| |ブランチの削除を許す|-|-|○|
 
+***
+***
 
 
 ## 参考
@@ -149,3 +219,4 @@ gitの運用方針を整理
  - [Git コンフリクト解消手順](https://qiita.com/crarrry/items/c5964512e21e383b73da)
  - [【Git】コンフリクト(conflict)が発生しても大丈夫な対処法まとめ](https://qiita.com/shizen-shin/items/391aac7b9febaf11bde6)
  - [git tagの仕様・使い方](https://www.kagoya.jp/howto/rentalserver/webtrend/gittag/)
+ - [文字の色コード](https://www.colordic.org/w)
