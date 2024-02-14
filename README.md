@@ -38,7 +38,30 @@ gitの運用方針を整理
 
  - コミットメッセージルール
 
-    ここ要検討
+    .gitmessageを設定
+
+    ```
+    git config --local commit.template .gitmessage
+    ``` 
+
+    `git commit -m`を使用せず以下を実行すると.gitmessageに記載されたテンプレートが表示される
+
+    ```
+    git commit
+    ```
+
+   エディタが開くのでメッセージを入力し、`:wq`で閉じる
+
+    ![gitcommit1](gitcommit1.png)
+
+    VSCodeからコミットする場合はメッセージ欄を空にした状態でコミットを押下する
+
+    ![gitcommit2](gitcommit2.png)
+
+    新規タブが開かれるのでコミットメッセージを入力し、Ctrl+sで保存してタブを閉じてコミット完了
+
+    ![gitcommit3](gitcommit3.png)
+
 
 
 ### 検証環境用ブランチ
