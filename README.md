@@ -1,6 +1,9 @@
 # git運用方針
 gitの運用方針を整理
 
+***
+***
+
 ## ブランチ管理
 
 | branch | 用途 | 作業者 |
@@ -13,6 +16,8 @@ gitの運用方針を整理
 
 ![gitflow](gitflow.png)
 
+***
+***
 
 ## ブランチ運用
 
@@ -65,13 +70,16 @@ gitの運用方針を整理
     
     ![conflict](conflict.png)
 
+***
+***
+
 ## リリース運用
 
 1. mainブランチへプルリクエスト
    ```
    main ← develop
    ```
-   <span style="color: #e60033;">※マージ方法は`Rebase and merge`で行う事</span>（mainとdevelopのコミットログを一致させるため）
+   ※マージ方法は`Rebase and merge`で行う事（mainとdevelopのコミットログを一致させるため）
 
 1. mainブランチをローカルで最新化
 
@@ -114,7 +122,6 @@ gitの運用方針を整理
    
    記載内容のフォーマットは以下参考
 
-   Full Changelogは「Generate release notes」をクリックすると自動で出来る
    ```
    ## リリース日
    2024/02/14
@@ -128,10 +135,12 @@ gitの運用方針を整理
    ## コミット一覧
    **Full Changelog**: https://github.com/hiroyalab/gitflow/commits/v1.0.0
    ```
+   Full Changelogは下図の「Generate release notes」をクリックすると自動で出来る
 
    ![release2](release2.png)
 
-
+***
+***
 
 ## リポジトリ設定(settings)
 [個人開発用のGitHubリポジトリで設定した項目たち](https://peno022.hatenablog.com/entry/github-repository-settings)
@@ -201,6 +210,8 @@ gitの運用方針を整理
 |Allow force pushes| |force pushを許す|-|-|-|
 |Allow deletions| |ブランチの削除を許す|-|-|○|
 
+***
+***
 
 
 ## 参考
